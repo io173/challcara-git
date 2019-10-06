@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+    <head> 
+        <meta charset="utf-8">
+        <title>question_2</title>
+        <meta name="description" content="#">
+
+        <link rel="stylesheet" href="../CSS/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"> <!-- リセットcssの指定 -->
+    </head>
+    <body>
+        <header>
+                <form name="HOME_form" action="/home" method="POST">
+                    <h1><input type="submit" value="HOME"></h1>
+                </form>
+            <!-- <nav>
+                <ul>
+                    <li></li>
+                </ul> -->
+            </nav>
+        </header>
+        <div>
+            <h2 class="main">今の気分は？</h2>
+            <form name="question_1_form" action="/ryori" method="post">
+				<input type="radio" name="ryo" value="6"/>たくさん食べたい<br>
+				<input type="radio" name="ryo" value="7"/>軽く食べたい<br>
+				<input type="submit" value="決定"/>
+			</form>
+        </div>
+        <div id="grid">
+            <ul>
+                <li class="lis"><img src='/image0.jpeg' width="120" height="120"></li>
+                <li class="lis"><img src='/image1.jpeg' width="120" height="120"></li>
+                <li class="lis"><img src='/image2.jpeg' width="120" height="120"></li>
+                <li class="lis"><img src='/image3.jpeg' width="120" height="120"></li>
+                <li class="lis"><img src='/image4.jpeg' width="120" height="120"></li>
+            </ul>
+            <ul>
+                <li class="lis"><img src='/image5.jpeg' width="120" height="120"></li>
+                <li class="lis"><img src='/image6.jpeg' width="120" height="120"></li>
+                <li class="lis"><img src='/image7.jpeg' width="120" height="120"></li>
+                <li class="lis"><img src='/image8.jpeg' width="120" height="120"></li>
+                <li class="lis"><img src='/image9.jpeg' width="120" height="120"></li>
+            </ul>
+        </div>
+    </body>
+
+    <footer>
+        <p><small>&copy; Tamago ha Kimiha</small></p>
+    </footer>
+</html>

@@ -43,7 +43,7 @@ app.post("/home",function(req,res){
 //検索エンジンにページ遷移
 for(const index in ryouri){
 app.get("/link"+index,function(req,res){
-  open('http://www.google.com/search?q='+ryouriSearch[index]);
+  open('https://cookpad.com/search/'+ryouriSearch[index]);
   res.sendFile(path.join(__dirname,"./public/answer.html"));
 })
 }
@@ -53,129 +53,170 @@ app.post("/ryori",function(req,res) {
   var text = req.body['ryo'];
   var question_N;
   for(const index in ryouri){
-    if(text=='1'){
-      question_N=1;
-      if(index==4||index==5||index==6||index==9){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='2'){
-        question_N=1;
-        if(index==13){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='3'){
-        question_N=1;
-        if(index==2){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='4'){
-        question_N=1;
-        if(index==1||index==3||index==6||index==7){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='5'){
-        question_N=1;
-        if(index==0||index==8||index==11||index==12||index==14){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='6'){
-        question_N=2;
-        if(index==3||index==4||index==5||index==6||index==7||index==11||index==12){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='7'){
-        question_N=2;
-        if(index==0||index==1||index==2||index==8||index==11||index==13||index==14){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='8'){
-        question_N=3;
-        if(index==1||index==7||index==8){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='9'){
-        question_N=3;
-        if(index==4||index==6){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='10'){
-        question_N=3;
-        if(index==1||index==8||index==11){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='11'){
-        question_N=3;
-        if(index==8||index==10||index==13||index==15){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='12'){
-        question_N=3;
-        if(index==11||index==12){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='13'){
-        question_N=3;
-      }else if(text=='14'){
-        question_N=4;
-        if(index==4||index==5||index==6||index==11||index==12){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='15'){
-        question_N=4;
-        if(index==0||index==3||index==9||index==11||index==12||index==13||index==14){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='16'){
-        question_N=5;
-        if(index==0||index==1||index==3||index==8||index==11||index==13){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='17'){
-        question_N=5;
-        if(index==1||index==2||index==8||index==11){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='18'){
-        question_N=4;
-        if(index==11||index==2){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='19'){
-        question_N=4;
-        if(index==8||index==11){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='20'){
-        question_N=4;
-        if(index==1||index==8||index==11){
-        }else{
-          ryouri[index]='X';
-        }
-      }else if(text=='21'){
-        question_N=4;
-        if(index==11){
-        }else{
-          ryouri[index]='X';
-        }
-      }
+	switch(text){
+		case '1':
+			question_N=1;
+				if(index==4||index==5||index==6||index==9){
+					break;
+				}else{
+					ryouri[index]='X';
+					break;
+				}
+		case '2':
+			question_N=1;
+				if(index==13){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '3':
+			question_N=1;
+				if(index==2){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '4':
+			question_N=1;
+				if(index==1||index==3||index==6||index==7){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '5':
+			question_N=1;
+				if(index==0||index==8||index==11||index==12||index==14){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '6':
+			question_N=2;
+				if(index==3||index==4||index==5||index==6||index==7||index==11||index==12){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '7':
+			question_N=2;
+				if(index==0||index==1||index==2||index==8||index==11||index==13||index==14){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '8':
+			question_N=3;
+				if(index==1||index==7||index==8){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '9':
+			question_N=3;
+				if(index==4||index==6){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '10':
+			question_N=3;
+				if(index==1||index==8||index==11){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '11':
+			question_N=3;
+				if(index==8||index==10||index==13||index==15){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '12':
+			question_N=3;
+				if(index==11||index==12){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '13':
+			question_N=3;
+				break;
+		case '14':
+			question_N=4;
+				if(index==4||index==5||index==6||index==11||index==12){
+					break;
+				}else{
+				  ryouri[index]='X';
+				}
+		case '15':
+			question_N=4;
+				if(index==0||index==3||index==9||index==11||index==12||index==13||index==14){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '16':
+			question_N=5;
+				if(index==0||index==1||index==3||index==8||index==11||index==13){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '17':
+			question_N=5;
+				if(index==1||index==2||index==8||index==11){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '18':
+			question_N=4;
+				if(index==11||index==2){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '19':
+			question_N=4;
+				if(index==8||index==11){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '20':
+			question_N=4;
+				if(index==1||index==8||index==11){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+		case '21':
+			question_N=4;
+				if(index==11){
+					break;
+				}else{
+				  ryouri[index]='X';
+				  break;
+				}
+	  }
     }
   console.log(text);
 

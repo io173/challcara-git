@@ -24,7 +24,8 @@ header {
     background: #432;
 }
 header h1 input {
-    color: white;
+	color: white;
+	background: #432;
     font-size: 3rem;
 }
 

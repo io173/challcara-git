@@ -21,10 +21,19 @@ img {
 }
 
 header {
-    background: #432;
-}
-header h1 input {
+	background: #432;
 	color: white;
+}
+
+.mainlis {
+	text-align: center;
+}
+img.mainpic{
+	width: 350px;
+	height: 1fr;
+}
+
+header h1 input {
 	background: #432;
     font-size: 3rem;
 }
@@ -33,6 +42,11 @@ header h1 input {
     text-align: center;
     margin-top: 7.5%;
 }
+
+.sub-content {
+    text-align: center;
+}
+
 .text {
     font-size: 25px;
     margin-bottom: 16px;
